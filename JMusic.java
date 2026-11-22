@@ -18,6 +18,11 @@ public class JMusic extends Application {
 
         Scene scene = new Scene(root);
         stage.setTitle("jMusic Player by Eimy<3");
+        var appIconStream = getClass().getResourceAsStream("icon.png");
+        if(appIconStream != null) {
+        	stage.getIcons().add(new Image(appIconStream));
+        }
+       
         stage.setWidth(600);
         stage.setHeight(475);
         stage.setResizable(false);
