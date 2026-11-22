@@ -162,15 +162,6 @@ public class SceneController implements Initializable {
         resetButton.setText("↺");
         previousButton.setText("⏮");
         nextButton.setText("⏭");
-    	
-        /*playIcon = new Image(getClass().getResourceAsStream("icons/play.png"));
-    	pauseIcon = new Image(getClass().getResourceAsStream("icons/pause.png"));
-    	
-    	setButtonIcon(pauseButton, playIcon);
-    	setButtonIcon(resetButton, new Image(getClass().getResourceAsStream("icons/reset.png")));
-    	setButtonIcon(previousButton, new Image(getClass().getResourceAsStream("icons/previous.png")));
-    	setButtonIcon(nextButton, new Image(getClass().getResourceAsStream("icons/next.png")));
-  */
     }
        
     //create setter for buttons
