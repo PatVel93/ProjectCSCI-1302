@@ -40,7 +40,7 @@ public class SceneController implements Initializable {
     private Slider songProgressBar;
     
     @FXML
-    //private ImageView imageView;
+    private ImageView imageView;
 
     private Media media;
     private MediaPlayer mediaPlayer;
@@ -54,14 +54,11 @@ public class SceneController implements Initializable {
     private boolean running;
     private boolean isPlay = true;
     
-    private Image playIcon;
-    private Image pauseIcon;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         songs = new ArrayList<File>();
-      
-       // File song = new File("/Users/eimylugogonzalez/Music/Moths.mp3");
 
         	directory = new File(System.getProperty("user.home"), "ProjectMusic");
         	files = directory.listFiles()
@@ -124,9 +121,14 @@ public class SceneController implements Initializable {
         for (int i = 0; i < speeds.length; i++) {
             speedBox.getItems().add(Integer.toString(speeds[i]) + "%");
         }
-
-       // Image image = new Image("icon.png");
-       // imageView.setImage(image);
+        var iconStream = getClass().getResourceAsStream("icon.png");
+        if(iconStream != null) {
+        	Image image = new Image(iconStream);
+        	imageView.setImage(image);
+        }else {
+        	System.out.println("Could not find icon.png in package!");
+        }
+    
 
         speedBox.setOnAction(this::changeSpeed);
 
