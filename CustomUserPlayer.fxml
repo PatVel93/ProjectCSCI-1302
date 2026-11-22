@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ch14.CustomizeController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="600"
+      prefHeight="475">
+
+    <Label text="Customize Your Music Player"
+           style="-fx-font-size: 24px;"/>
+
+    <ImageView fx:id="imagePreview"
+               fitWidth="200"
+               fitHeight="200"
+               preserveRatio="true"/>
+
+    <Button text="Choose Album Image"
+            onAction="#chooseImage"/>
+
+    <Button text="Launch Customized Player"
+            onAction="#launchPlayer"/>
+
+</VBox>
