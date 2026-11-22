@@ -8,32 +8,37 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.stage.Stage;
 
 public class MainMenuController {
 
     @FXML
-    private void openDefaultPlayer(ActionEvent event)
-            throws IOException {
-
+    public void openDefaultPlayer(ActionEvent event) throws IOException {
+    	System.out.println("Default player selected!");
+        // Load the original music player FXML
         Parent root = FXMLLoader.load(
-            getClass().getResource("MainMenu.fxml")
+            getClass().getResource("Scene.fxml")
         );
 
+        
         Stage stage = (Stage)
             ((Node) event.getSource()).getScene().getWindow();
 
-        stage.setScene(new Scene(root));
-        stage.setTitle("JMusic Player");
+        // Create the music player scene
+        Scene musicScene = new Scene(root);
+
+        stage.setScene(musicScene);
+        stage.setTitle("jMusic Player");
+        stage.setWidth(600);
+        stage.setHeight(500);
+        
         stage.show();
     }
 
     @FXML
-    private void openCustomPlayer(ActionEvent event)
-            throws IOException {
+    public void openCustomPlayer(ActionEvent event) {
 
-        // We will create the customized player later.
-        System.out.println("Custom player selected");
+        System.out.println("Customized player selected!");
     }
 }
