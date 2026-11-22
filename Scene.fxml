@@ -107,7 +107,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="216.0" layoutY="34.0" text="jMusic Player" textFill="WHITE">
+      <Label layoutX="155.0" layoutY="34.0" text="CoolBeanz Music Player" textFill="WHITE">
          <font>
             <Font name="Raleway Black" size="26.0" />
          </font>
@@ -160,7 +160,7 @@
             <DropShadow color="#000000bf" offsetY="2.0" />
          </effect>
       </Button>
-      <Label layoutX="176.0" layoutY="14.0" text="Coded with love by @jihedkdiss" textFill="WHITE">
+      <Label layoutX="176.0" layoutY="14.0" text="Coded with love by CoolBeanz" textFill="WHITE">
          <font>
             <Font name="Raleway Regular" size="17.0" />
          </font>
