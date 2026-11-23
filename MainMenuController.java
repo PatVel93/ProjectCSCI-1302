@@ -36,9 +36,20 @@ public class MainMenuController {
         stage.show();
     }
 
-    @FXML
-    public void openCustomPlayer(ActionEvent event) {
 
-        System.out.println("Customized player selected!");
-    }
+
+@FXML
+public void openCustomPlayer(ActionEvent event)
+        throws IOException {
+
+    Parent root = FXMLLoader.load(
+        getClass().getResource("/ch14/CustomizePlayer.fxml")
+    );
+
+    Stage stage = (Stage)
+        ((Node) event.getSource()).getScene().getWindow();
+
+    stage.setScene(new Scene(root));
+    stage.setTitle("Customize jMusic Player");
+}
 }
