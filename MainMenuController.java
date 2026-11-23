@@ -51,5 +51,22 @@ public void openCustomPlayer(ActionEvent event)
 
     stage.setScene(new Scene(root));
     stage.setTitle("Customize jMusic Player");
+        }
+@FXML
+public void openCredits(ActionEvent event) throws IOException{
+    System.out.println("Credits selected!");
+    Parent root = FXMLLoader.load(getClass().getResource("Credits.fxml"));
+    Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+    	
+    // Create the music player scene
+    Scene creditsScene = new Scene(root);
+    	
+    stage.setScene(creditsScene);
+    stage.setTitle("Credits");
+    stage.setWidth(600);
+    stage.setHeight(500);
+    	
+    stage.show();
+
 }
 }
